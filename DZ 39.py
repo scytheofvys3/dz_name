@@ -12,7 +12,7 @@ class Iterator:
         self.start = start
         if not isinstance(stop, int):
             raise ValueError('Нужно целое число в stop ')
-        self.stop = int(stop)
+        self.stop = stop
         if step == 0:
             raise StepValueError("Шаг не может быть равен нулю")
         self.step = step
