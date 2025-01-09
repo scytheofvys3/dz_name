@@ -24,7 +24,7 @@ class Iterator:
         return self
 
     def __next__(self):
-        if str(self.step)[0] == '-':
+        if self.step < 0:
             self.pointer += self.step
             if self.pointer < self.stop:
                 print('')
