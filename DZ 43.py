@@ -42,8 +42,3 @@ first_knight.join()
 second_knight.join()
 
 print(f'Все битвы окончены. Воцарился мир!')
-
-
-
-
-
