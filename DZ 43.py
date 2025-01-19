@@ -3,23 +3,24 @@ import threading
 import time
 
 class Knight(threading.Thread):
-    __HP_BOT = 100
-    __DAY = 0
     def __init__(self, name, power):
         super().__init__()
         #threading.Thread.__init__(self)
         self.name = str(name)
         self.power = int(power)
+        self.hp_bot = 100
+        self.day = 0
 
 
     def fight(self, name, power):
         while True:
-            self.__HP_BOT -= self.power
-            self.__DAY += 1
-            print(f'{self.name} Сражается {self.__DAY} день/дня, осталось {self.__HP_BOT} воинов!')
+            self.hp_bot -= self.power
+            self.day += 1
+            print(f'{self.name} Сражается {self.day} день/дня, осталось {self.hp_bot} воинов!')
             time.sleep(1.1)
-            if self.__HP_BOT <= 0:
-                return f'{self.name} одержал победу спустя {self.__DAY} дней/дня!'
+            if self.hp_bot <= 0:
+                print(f'{self.name} одержал победу спустя {self.day} дней/дня!')
+                break
             # else:
             #     print(f'{self.name} одержал победу спустя {self.sleep_day} дней')
             #     break
